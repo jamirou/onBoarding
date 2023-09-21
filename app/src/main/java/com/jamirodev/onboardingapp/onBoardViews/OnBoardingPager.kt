@@ -38,7 +38,7 @@ fun OnBoardingPager(
                 ) {
                     DataLoader(
                         modifier = Modifier
-                            .size(200.dp)
+                            .size(280.dp)
                             .fillMaxWidth()
                             .align(alignment = Alignment.CenterHorizontally),
                         image = item[page].image
@@ -46,7 +46,7 @@ fun OnBoardingPager(
                     Text(
                         text = item[page].title,
                         modifier = Modifier
-                            .padding(top = 50.dp),
+                            .padding(top = 35.dp),
                         color = Color.Black,
                         style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold
