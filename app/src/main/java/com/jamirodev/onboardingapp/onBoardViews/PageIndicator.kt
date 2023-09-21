@@ -35,7 +35,7 @@ fun Indicator(isSelect: Boolean) {
             .height(10.dp)
             .width(25.dp)
             .clip(CircleShape)
-            .background(if (isSelect) Color.Red else Color.Gray)
+            .background(if (isSelect) Color.Black else Color.Gray)
     )
 
 }

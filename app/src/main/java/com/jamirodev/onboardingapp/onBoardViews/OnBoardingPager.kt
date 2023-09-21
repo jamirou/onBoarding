@@ -32,7 +32,7 @@ fun OnBoardingPager(
             HorizontalPager(state = pagerState) { page ->
                 Column(
                     modifier = Modifier
-                        .padding(60.dp)
+                        .padding(30.dp)
                         .fillMaxWidth(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -48,7 +48,7 @@ fun OnBoardingPager(
                         modifier = Modifier
                             .padding(top = 50.dp),
                         color = Color.Black,
-                        style = MaterialTheme.typography.bodyLarge,
+                        style = MaterialTheme.typography.headlineMedium,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
