@@ -11,9 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.jamirodev.onboardingapp.dataStore.StoreBoarding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
-fun ButtonFinish(currentPage: Int, navController: NavController) {
+fun ButtonFinish(currentPage: Int, navController: NavController, store: StoreBoarding) {
     Row(
         modifier = Modifier
             .padding(bottom = 20.dp)
@@ -22,6 +26,9 @@ fun ButtonFinish(currentPage: Int, navController: NavController) {
     ) {
         if (currentPage == 2) {
             OutlinedButton(onClick = {
+                CoroutineScope(Dispatchers.IO).launch {
+                    store.saveBoarding(true)
+                }
                 navController.navigate("Home") {
                     popUpTo(0)
                 }

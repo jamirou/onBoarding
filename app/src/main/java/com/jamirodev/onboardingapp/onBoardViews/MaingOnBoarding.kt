@@ -10,10 +10,11 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.rememberPagerState
 import com.jamirodev.onboardingapp.R
 import com.jamirodev.onboardingapp.data.PageData
+import com.jamirodev.onboardingapp.dataStore.StoreBoarding
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun MainOnBoarding(navController: NavController) {
+fun MainOnBoarding(navController: NavController, store: StoreBoarding) {
     val items = ArrayList<PageData>()
 
     items.add(
@@ -48,7 +49,8 @@ fun MainOnBoarding(navController: NavController) {
         item = items, pagerState = pagerState, modifier = Modifier
             .fillMaxWidth()
             .background(Color.White),
-        navController
+        navController,
+        store
     )
 }
 

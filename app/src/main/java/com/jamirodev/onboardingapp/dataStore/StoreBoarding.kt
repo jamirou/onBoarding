@@ -15,7 +15,7 @@ class StoreBoarding(private val context: Context) {
         val STORE_BOARD = booleanPreferencesKey("store_board")
     }
 
-    val getBOARDING: Flow<Boolean> = context.dataStore.data
+    val getBoarding: Flow<Boolean> = context.dataStore.data
         .map { preference ->
             preference[STORE_BOARD] ?: false
         }
